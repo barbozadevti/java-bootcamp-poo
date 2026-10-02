@@ -5,6 +5,8 @@
 Entrega do desafio de projeto **"Abstraindo um Bootcamp Usando Orientação a Objetos em Java"**, da [DIO](https://www.dio.me), sobre os quatro pilares da POO: **abstração, encapsulamento, herança e polimorfismo**.
 
 > Versão ampliada para portfólio: **[barbozadevti/jornada](https://github.com/barbozadevti/jornada)**, uma plataforma de bootcamps no navegador (catálogo, matrícula, progresso com XP, ranking e certificado), com o mesmo domínio em Java 21 + Spring Boot e o diagrama UML conferido por testes.
+>
+> **Experimente:** [demo online](https://jornada-fk18.onrender.com) (hospedagem gratuita; o primeiro acesso pode levar cerca de 1 minuto) e [apresentação interativa](https://barbozadevti.github.io/jornada/) com a visão de recrutador e a de CEO.
 
 ## O problema
 

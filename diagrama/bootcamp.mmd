@@ -1,0 +1,44 @@
+classDiagram
+    direction TB
+    class Conteudo {
+        <<abstract>>
+        -String titulo
+        -String descricao
+        +calcularXp() int
+        +explicarXp() String
+    }
+    class Curso {
+        -int cargaHoraria
+        +calcularXp() int
+    }
+    class Mentoria {
+        -LocalDate data
+        +calcularXp() int
+        +jaAconteceu(hoje: LocalDate) boolean
+    }
+    class Desafio {
+        -int dificuldade
+        +calcularXp() int
+    }
+    class Bootcamp {
+        -String nome
+        -LocalDate dataInicial
+        -LocalDate dataFinal
+        -int vagas
+        +adicionar(conteudo: Conteudo) Bootcamp
+        +encerrado(hoje: LocalDate) boolean
+        +temVaga() boolean
+        +calcularXpTotal() int
+    }
+    class Dev {
+        -String nome
+        +inscrever(bootcamp: Bootcamp, hoje: LocalDate) void
+        +progredir(hoje: LocalDate) Optional~Conteudo~
+        +calcularTotalXp() int
+    }
+    Conteudo <|-- Curso
+    Conteudo <|-- Mentoria
+    Conteudo <|-- Desafio
+    Bootcamp "1" o-- "*" Conteudo : trilha
+    Bootcamp "1" o-- "*" Dev : inscritos
+    Dev "*" --> "*" Conteudo : inscritos / concluídos
